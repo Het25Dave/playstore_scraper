@@ -1,0 +1,9 @@
+google-play-scraper
+pandas 
+numpy
+sqlalchemy
+transformers
+torch 
+matplotlib
+seaborn
+jupyter
