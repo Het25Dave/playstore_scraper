@@ -5,3 +5,7 @@ __pycache__/
 *.pyd
 .Python
 .DS_Store
+final_swiggy.csv
+final_zomato.csv
+swiggy_data.csv
+zomato_data.csv
