@@ -9,3 +9,5 @@ final_swiggy.csv
 final_zomato.csv
 swiggy_data.csv
 zomato_data.csv
+sentiment_swiggy.csv
+sentiment_zomato.csv
