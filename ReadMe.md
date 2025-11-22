@@ -33,6 +33,7 @@ Contextual Categorization: An LLM (Llama/GPT) classifies negative reviews into s
 💡 Missing Features: (Features present in Competitor X but missing here)
 
 🛠️ Tech Stack
+
 Language: Python
 
 ML Frameworks: PyTorch, Hugging Face transformers
@@ -42,6 +43,7 @@ Data Processing: Pandas (for pivot tables and aggregations)
 Visualization: Matplotlib/Seaborn (for comparative heatmaps)
 
 🚀 Roadmap
+
 [x] Phase 1: Build Multi-App Scraper (Target vs. Competitors).
 
 [x] Phase 2: Implement Comparative Sentiment Analysis (Transformer-based).
@@ -49,8 +51,6 @@ Visualization: Matplotlib/Seaborn (for comparative heatmaps)
 [ ] Phase 3 (Current): Integrate LLM for "Gap Analysis"—automatically identifying features requested in our app that exist in competitor apps.
 
 [ ] Phase 4: Develop a Streamlit Dashboard for real-time "Head-to-Head" visualization.
-
-[ ] Phase 5 (Juspay Alignment): Implement RAG (Retrieval Augmented Generation) to allow users to "Chat with the Reviews" (e.g., "Compare the login issues between App A and App B").
 
 💻 Installation & Usage:
 
