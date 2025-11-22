@@ -1,46 +1,61 @@
-**Competitor App Review Analysis**
+MarketPulse: Competitive App Intelligence Pipeline
+📋 Overview
+MarketPulse is an NLP-driven competitive intelligence tool designed to benchmark mobile applications against their direct competitors.
 
-## **Overview : **
-<b>This project is focused on conducting a competitor analysis using user review data from two different mobile applications listed on the Google Play Store. The analysis aims to compare competing apps in the same domain by extracting review data, utilizing NLP techniques, and identifying the primary drivers behind high or low ratings based on user comments and ratings.
-</b>
+In crowded app marketplaces, understanding your own user feedback is not enough—you need to know what users hate about your rivals. This project scrapes, analyzes, and compares user sentiment across multiple target applications to uncover:
 
-## **Data Collection Library : ** 
-<b>This project uses the google-play-scraper, a Python package that provides a user-friendly API for crawling the Google Play Store and retrieving app metadata and review information without external dependencies. google-play-scraper helps fetch review text, user IDs, scores, app versions, thumbs up counts, and review timestamps directly in Python, making it ideal for large-scale data analysis tasks.
-</b>
+Feature Gaps: What are competitors doing better?
 
-## **Workflow : **
-1. *Data Collection:* User reviews for two competitor apps are fetched using the google-play-scraper Python library.
+Market Opportunities: What are users complaining about in rival apps that we can solve?
 
-2. *Data Processing:* Reviews, ratings, app versions, and other metadata are cleaned and structured for analysis.
+Sentiment Benchmarking: How does our "Bug Rate" compare to the industry standard?
 
-3. *NLP Analysis:* Sentiment classification and topic modeling are applied to review text using Hugging Face transformers.
+🏗️ Architecture & Methodology
+The pipeline utilizes a comparative architecture, processing multiple data streams simultaneously to generate side-by-side analytics.
 
-4. *Insights & Visualization:* Results are summarized and visualized to highlight why each app receives positive or negative feedback, identifying differentiators and recurring themes.
+1. Multi-Source Ingestion
+Input: A dictionary of Target App vs. Competitor Apps (List of PlayStore IDs).
 
-## **Getting Started : **
+Process: Dynamic scraping of review metadata across the specified cohort to build a comparative dataset.
 
-1. Install dependencies from requirements.txt.
+2. NLP Analysis Engine (Hybrid Approach)
+Sentiment Scoring: Uses Hugging Face Transformers (distilbert) to assign granular sentiment scores (-1.0 to +1.0) to every review.
 
-2. Set target app IDs for scraping.
+Topic Modeling: (Planned) Clustering reviews to detect dominant topics (e.g., "Login," "Payment," "UI") across the entire market segment.
 
-3. Run the data extraction notebook or script.
+3. Strategic Reasoning (LLM Layer) [In-Progress]
+Contextual Categorization: An LLM (Llama/GPT) classifies negative reviews into strategic buckets:
 
-4. Process and analyze the data in subsequent notebooks using NLP transforms.
+🚨 Critical Failures: (Crash, Data Loss)
 
-5. Explore the visualizations and conclusions in the reporting notebook.
+📉 Churn Drivers: (Ads too frequent, Subscription cost)
 
-# **Example Use Cases : **
+💡 Missing Features: (Features present in Competitor X but missing here)
 
-1. Product Managers: Understand user pain points and areas for improvement.
+🛠️ Tech Stack
+Language: Python
 
-2. Developers: Prioritize bug fixes and new features.
+ML Frameworks: PyTorch, Hugging Face transformers
 
-3. Marketers: Benchmark apps against key competitors and refine positioning strategies.
+Data Processing: Pandas (for pivot tables and aggregations)
 
-# **Feedback & Collaboration : **
+Visualization: Matplotlib/Seaborn (for comparative heatmaps)
 
-Suggestions or questions? Open an issue or reach out:
+🚀 Roadmap
+[x] Phase 1: Build Multi-App Scraper (Target vs. Competitors).
 
- email: hetdave2502@gmail.com 
- LinkedIn: https://www.linkedin.com/in/hetdave200225/
+[x] Phase 2: Implement Comparative Sentiment Analysis (Transformer-based).
 
+[ ] Phase 3 (Current): Integrate LLM for "Gap Analysis"—automatically identifying features requested in our app that exist in competitor apps.
+
+[ ] Phase 4: Develop a Streamlit Dashboard for real-time "Head-to-Head" visualization.
+
+[ ] Phase 5 (Juspay Alignment): Implement RAG (Retrieval Augmented Generation) to allow users to "Chat with the Reviews" (e.g., "Compare the login issues between App A and App B").
+
+💻 Installation & Usage:
+
+# Clone the repository
+git clone https://github.com/yourusername/market-pulse.git
+
+# Install dependencies
+pip install -r requirements.txt
